@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #18c13f;
+  --secondary-color: yellow;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
