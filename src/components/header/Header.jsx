@@ -8,6 +8,7 @@ import useAuthContext from "../../hooks/useAuthContext";
 import useNavbarContext from "../../hooks/useNavbarContext";
 import { MdClose, MdMenu } from "react-icons/md";
 import { FaRubleSign } from "react-icons/fa";
+import SideNavbar from "../sidenavbar/SideNavbar";
 
 const Header = () => {
 	const { isNavbarVisible, setIsNavBarVisible } = useNavbarContext();
@@ -24,7 +25,9 @@ const Header = () => {
 							<FaRubleSign />
 						</NavLink>
 					</div>
-					<div className="nav-menu">{user ? <SignedInMenu /> : <SignedOutMenu />}</div>
+					<div className={`nav-menu  ${isNavbarVisible ? "nav-menu-show" : "nav-menu-hide"} `}>
+						{user ? <SignedInMenu /> : <SignedOutMenu />}
+					</div>
 					<div
 						className="nav-icons"
 						onClick={() => setIsNavBarVisible(!isNavbarVisible)}
@@ -34,6 +37,7 @@ const Header = () => {
 				</nav>
 			</header>
 			<div className="pages">
+				<SideNavbar />
 				<Outlet />
 			</div>
 		</div>

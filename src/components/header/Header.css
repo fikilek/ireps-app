@@ -1,3 +1,11 @@
+.nav-menu .nav-menu-show {
+  visibility: visible;
+}
+
+.nav-menu .nav-menu-hide {
+  visibility: hidden;
+}
+
 nav {
 	display: flex;
 	align-items: center;
@@ -18,20 +26,29 @@ nav .nav-logo svg {
 	height: 3rem;
 }
 
+/* nav .nav-icons svg {
+	margin: 0.5rem;
+	width: 3rem;
+	height: 3rem;
+} */
+
 nav .nav-menu {
 	width: -webkit-fill-available;
 	display: flex;
 	justify-content: space-between;
-  margin-left: 2rem;
+	margin-left: 2rem;
 }
 
 nav .nav-icons {
 	font-size: 4rem;
 	position: absolute;
-	right: 2rem;
-	top: 50%;
-	transform: translateY(-50%);
+	right: 0;
 	cursor: pointer;
 	z-index: 1500;
-	display: none;
+	display: flex;
+	align-items: center;
+	margin-right: 1rem;
+  visibility: hidden;
 }
+
+

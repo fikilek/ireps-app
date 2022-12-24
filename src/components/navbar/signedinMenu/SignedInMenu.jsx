@@ -36,7 +36,7 @@ const SignedInMenu = () => {
 	return (
 		<>
 			<ul
-				className={`nav-list navlist-left ${isNavbarVisible ? "hide" : "show"}`}
+				className={`nav-list nav-list-left`}
 				onClick={() => setIsNavBarVisible(false)}
 			>
 				{/* Dashboard */}
@@ -52,7 +52,7 @@ const SignedInMenu = () => {
 				{/* Body of Knowledge (Bok) */}
 				<MenuBlock menuData={dataBok} />
 			</ul>
-			<ul className="nav-list navlist-right">
+			<ul className="nav-list nav-list-right">
 				{/* Admin */}
 				<MenuBlock menuData={dataAdmin} />
 				<li className="btn">
@@ -62,7 +62,7 @@ const SignedInMenu = () => {
 							user.isSignedin ? `${user.name} ${user.surname}` : "No User signedin"
 						}
 						position="left"
-						className="user-tooltip"
+						size={"big"}
 					>
 						<NavLink to="/user" className="user-initials">
 							{/* {user.isSignedin ? `${user.name} ${user.surname}` : "No User"} */}
